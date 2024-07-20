@@ -1,1 +1,19 @@
 
+import time
+Hours = int(input("Enter the total hours : "))
+Seconds= Hours*60*60
+print(f"The total seconds in : {Hours} is {Seconds}")
+print("Do you want to start countdown?")
+countdown=input("Yes/No ")
+print(countdown)
+if countdown == "yes":
+    print("Countdown Starting....")
+    for bal_secs in range(Seconds,0,-10):
+        time.sleep(10)
+        minutes= (bal_secs % 3600) //60
+        hour= bal_secs//3600
+        secs = bal_secs % 60
+        print(f"time is {hour} hour {minutes} min {secs} secs")
+    print("countdown finished")
+else:
+    print("Countdown not started")
